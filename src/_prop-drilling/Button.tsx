@@ -1,9 +1,16 @@
 import React from "react";
-import { useFormContext } from "../_contexts/FormContext";
 
-const Button: React.FC = () => {
-  const { formData } = useFormContext();
+interface FormData {
+  name: string;
+  email: string;
+  password: string;
+}
 
+interface ButtonProps {
+  formData: FormData;
+}
+
+const Button: React.FC<ButtonProps> = ({ formData }) => {
   const handleSubmit = () => {
     alert(`Form submitted with data:\n${JSON.stringify(formData, null, 2)}`);
   };
