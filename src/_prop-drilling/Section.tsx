@@ -1,8 +1,6 @@
-// src/Section.tsx
 import React from "react";
 import Input from "./Input";
 import Button from "./Button";
-
 interface FormData {
   name: string;
   email: string;
